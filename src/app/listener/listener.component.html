@@ -1,0 +1,11 @@
+<h3>Receiver</h3>
+<h4 *ngIf="messages.length">
+  Incoming Messages
+  <button (click)="clear()" class="btn btn-outline-primary btn-sm">Purge Queue</button>
+</h4>
+<ul class="list-group list-group-flush">
+  <li *ngFor="let message of messages" class="list-group-item">
+    {{message.text}}
+    <button (click)="send(message)" class="btn btn-secondary btn-sm">Respond</button>
+  </li>
+</ul>

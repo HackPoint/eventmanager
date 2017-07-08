@@ -1,0 +1,9 @@
+<h3>Sender</h3>
+<button (click)="send()" class="btn btn-primary">Send Message</button>
+<h4 *ngIf="messages.length">
+  Incoming Messages
+  <button type="button" class="btn btn-warning btn-sm" (click)="clear()">x</button>
+</h4>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let message of messages">Response: {{message}}</li>
+</ul>
